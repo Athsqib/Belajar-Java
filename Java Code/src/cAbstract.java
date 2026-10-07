@@ -8,29 +8,37 @@ public class cAbstract {
     }
 
     public static class Circle extends Shape{
-        double radius;
+        protected double radius;
 
-        Circle(double radius){
+        public Circle(double radius){
             this.radius = radius;
         }
 
+        public Circle(){
+            this (1.0);
+        }
+
         @Override
-        double area(){
+        public double area(){
             return Math.PI * radius * radius;
         }
     }
 
     public static class Triangle extends Shape{
-        double base;
-        double height;
+        protected double base;
+        protected  double height;
 
-        Triangle(double base, double height){
+        public Triangle(double base, double height){
             this.base = base;
             this.height = height;
         }
 
+        public Triangle(){
+            this (1.0, 1.0);
+        }
+
         @Override
-        double area(){
+        public double area(){
             return 0.5 * base * height;
         }
     }
@@ -39,9 +47,13 @@ public class cAbstract {
         double length;
         double width;
 
-        Rectangle(double length, double width){
+        public Rectangle(double length, double width){
             this.length = length;
             this.width = width;
+        }
+
+        public Rectangle(){
+            this (1.0, 1.0);
         }
 
         @Override
@@ -51,9 +63,9 @@ public class cAbstract {
     }
 
     public static void main(String[] args){
-        Circle circle = new Circle(5);
-        Triangle triangle = new Triangle(2, 3);
-        Rectangle rectangle = new Rectangle(2, 5);
+        Circle circle = new Circle();
+        Triangle triangle = new Triangle();
+        Rectangle rectangle = new Rectangle();
         System.out.println(circle.area());
         System.out.println(triangle.area());
         System.out.println(rectangle.area());
