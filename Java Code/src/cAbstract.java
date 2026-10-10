@@ -10,7 +10,7 @@ public class cAbstract {
     public static class Circle extends Shape{
         protected double radius;
 
-        public Circle(double radius){
+        public Circle(double radius){ //CONSTRUCTOR
             this.radius = radius;
         }
 
@@ -28,7 +28,7 @@ public class cAbstract {
         protected double base;
         protected  double height;
 
-        public Triangle(double base, double height){
+        public Triangle(double base, double height){ //CONSTRUCTOR
             this.base = base;
             this.height = height;
         }
@@ -47,7 +47,7 @@ public class cAbstract {
         double length;
         double width;
 
-        public Rectangle(double length, double width){
+        public Rectangle(double length, double width){ //CONSTRUCTOR
             this.length = length;
             this.width = width;
         }
@@ -63,9 +63,12 @@ public class cAbstract {
     }
 
     public static void main(String[] args){
-        Circle circle = new Circle();
-        Triangle triangle = new Triangle();
-        Rectangle rectangle = new Rectangle();
+        Shape circle = new Circle();
+        Shape triangle = new Triangle();
+        Shape rectangle = new Rectangle();
+        circle.display();
+        triangle.display();
+        rectangle.display();
         System.out.println(circle.area());
         System.out.println(triangle.area());
         System.out.println(rectangle.area());
