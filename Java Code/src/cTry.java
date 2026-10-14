@@ -1,7 +1,7 @@
 public class cTry {
     public static void main(String[] args){
         try {
-            int myInt = Integer.parseInt("Stick");
+            int myInt = Integer.parseInt("1");
             System.out.println(myInt+" adalah angka");
         }
         catch (NumberFormatException e){
